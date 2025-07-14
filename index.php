@@ -28,6 +28,7 @@
         </div>
         
          <?php 
+          session_start();
          $user = "admin";  
          if ($user == "employee") {
           # code...
