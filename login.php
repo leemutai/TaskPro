@@ -10,15 +10,29 @@
 <body class="login-body">
 
   <div class="login-container">
-    <form class="p-4 shadow rounded bg-white">
+    <form method="POST" action="app/login.php" class="p-4 shadow rounded bg-white">
       <h2 class="mb-4 text-center text-primary">Login</h2>
+      <?php  if (isset($_GET['error'])) {?>
+        <div class="alert alert-danger" role="alert">
+          <?php  echo stripcslashes($_GET['error']); ?>
+        </div>
+      <?php } ?>
+
+       <?php  if (isset($_GET['success'])) {?>
+        <div class="alert alert-success" role="alert">
+          <?php  echo stripcslashes($_GET['success']); ?>
+        </div>
+      <?php } ?>
+       
+
+      
       <div class="mb-3">
-        <label for="email" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email">
+        <label for="email" class="form-label">User name</label>
+        <input type="text" class="form-control" name="user_name">
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Enter password">
+        <input type="password" class="form-control" name="password" id="password" placeholder="Enter password">
       </div>
       <div class="d-grid">
         <button type="submit" class="btn btn-primary">Login</button>
