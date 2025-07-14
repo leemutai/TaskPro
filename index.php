@@ -23,8 +23,8 @@
     <div class="body">
       <nav class="side-bar">
         <div class="user-p">
-          <img src="img/prt.png" alt="" />
-          <h4>Lee</h4>
+          <img src="img/user.jpg" alt="" />
+          <h4>@user</h4>
         </div>
         
          <?php 
@@ -118,8 +118,7 @@
           <?php } ?>
       </nav>
       <section class="section-1">
-        <h1>WELCOME</h1>
-        <p>#CodingWithLee</p>
+        
       </section>
     </div>
   </body>
